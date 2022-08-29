@@ -1,0 +1,15 @@
+.navbar-brand{
+    margin-right: 0;
+    width: 230px;
+}
+.navbar-toggler:focus {
+     box-shadow: none;
+}
+.nav-link{
+color: $color-white !important;
+font-size: 15px;
+font-weight: 500;
+}
+.nav-link:hover, .nav-link:focus {
+   color: $color-yellow !important;
+}

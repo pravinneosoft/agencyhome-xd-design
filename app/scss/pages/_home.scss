@@ -1,0 +1,67 @@
+.hero{
+    // background-image: url('../images/header-bg.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // position: absolute;
+    // top: 0;
+    &__img{
+        // width: 100%;
+        // position: absolute;
+        // top: 0;
+        // z-index: -1;
+         background-image: url('../images/header-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__content{
+        div h2{
+color:$color-white;
+opacity: 1;
+font-size: 25px;
+font-weight: 700;
+margin: 25px 0;
+        }
+        div p{
+            color:$color-white;
+            opacity: 1;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 25px;//45 for large
+        }
+    }
+}
+
+//service block css
+.servicess{
+    &__heading{
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        color: $color-blue;
+        margin-top: 40px;
+    }
+    &__subheading{
+        color: $color-lightblue;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        padding: 20px 10px;
+
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    &__card{
+        width: 90%; //332px
+        text-align: center;
+        img{
+            width: unset;
+        }
+        h2{
+            font-size: 20px;
+            
+        }
+    }
+}
