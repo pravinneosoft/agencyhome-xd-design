@@ -1,9 +1,25 @@
 .footer {
     text-align: center;
     background-color: $color-lightblack;
+    display: flex;
+    justify-content: center;
 
     @include media-breakpoint-up(sm) {
         text-align: initial;
+    }
+
+    &__content {
+        padding: 0 25px;
+
+        @include media-breakpoint-up(md) {
+            width: 97%;
+            padding: 0 15px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 1110px;
+            padding: 0 30px;
+        }
     }
 
     &__wrapper {
@@ -11,7 +27,7 @@
 
         div {
             @include media-breakpoint-up(sm) {
-                padding: 30px;
+                padding: 10px;
             }
 
             @include media-breakpoint-up(md) {
@@ -19,7 +35,11 @@
                     padding-left: 0;
                 }
 
-                justify-content: center;
+                padding-left: 30px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-left: 60px;
             }
         }
     }
@@ -45,7 +65,7 @@
             font-weight: 400;
             color: $color-dark;
         }
-      
+
     }
 
     &__text {
@@ -79,36 +99,60 @@
             padding: 13px 0;
             background-color: $color-darkblue;
             border: 0;
+            border-top-left-radius:0;
+            border-bottom-left-radius: 0;
         }
 
     }
-    &__social{
+
+    &__social {
         display: flex;
         justify-content: center;
-        margin: 15px 0px;
         text-align: center;
-        a{
+
+        a {
             display: table;
             width: 38px;
             height: 38px;
             border-radius: 50%;
             margin: 0 10px;
             color: $color-white;
-            &:first-child{
+
+            &:first-child {
                 background-color: blue;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 background-color: aqua;
 
             }
-            &:last-child{
+
+            &:last-child {
                 background-color: red;
             }
-            i{
+
+            i {
                 display: table-cell;
                 vertical-align: middle;
             }
 
+        }
+    }
+
+    &__copyright {
+        align-items: center;
+        row-gap: 20px;
+justify-content: space-between;
+        div {
+            &:first-child {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            &:last-child{
+                text-align: center;
+                @include media-breakpoint-up(md){
+                text-align: end;}
+            }
         }
     }
 }
