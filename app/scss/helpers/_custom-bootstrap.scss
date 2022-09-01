@@ -13,3 +13,28 @@ font-weight: 500;
 .nav-link:hover, .nav-link:focus {
    color: $color-yellow !important;
 }
+
+.card{
+    margin: 0 auto;
+    width: 80%;
+    border: 0;
+    border-radius: 5px;
+   margin-bottom: 20px;
+        background-color: transparent;
+    &-body{
+        padding-top: 30px;
+        padding-left: 0;
+    }
+    &-title{
+        font-size: 20px;
+        color: $color-white;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    &-text{
+        font-size: 15px;
+        color: $color-white;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+}

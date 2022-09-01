@@ -1,17 +1,29 @@
 .btn {
-background-color: $color-yellow;
-border-radius: 5px;
-color: $color-white;
+    background-color: $color-yellow;
+    border-radius: 5px;
+    color: $color-white;
 
-&-say{
-padding: 13px 30px;
+    &-say {
+        padding: 13px 30px;
+        font-size: 15px;
+        font-size: 500;
 
-font-size: 15px;
-font-size: 500;
+        border: 0;
+    }
 
-border: 0;
-}
-&-read{
+    &-read {}
 
-}
+    &-submit {
+        position: absolute;
+        right: 5px;
+        width: 28%;
+        top: 5px;
+        padding: 12px 0;
+    }
+
+    &-learn-more {
+        color: $color-yellow;
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
