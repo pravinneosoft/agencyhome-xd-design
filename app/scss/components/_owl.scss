@@ -4,6 +4,21 @@
 
 .owl-carousel {
     position: relative;
+    .item .row div{
+        @include media-breakpoint-up(md){
+            padding: 0 15px;
+        }
+        
+        &:first-child{
+            text-align: center;
+        }
+        &:nth-child(2){
+            @include media-breakpoint-up(lg){
+                padding-left: 30px;
+            }
+            @include media-breakpoint-up(xl) { padding: 0; }
+        }
+    }
 }
 
 .owl-nav {
@@ -24,10 +39,14 @@
     }
 
     @include media-breakpoint-up(lg) {
-        justify-content: center;
-        top: 64%;
-        width: 19%;
-        left: 50%;
+        top: 73%;
+    width: 25%;
+    left: 52%;
+    }
+    @include media-breakpoint-up(xl){
+        top: 55%;
+        width: 15%;
+        left: 49%;
     }
 }
 

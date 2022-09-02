@@ -2,6 +2,9 @@
     margin-right: 0;
     width: 230px;
 }
+.navbar-toggler{
+    border: 2px solid $color-white;
+}
 .navbar-toggler:focus {
      box-shadow: none;
 }
@@ -13,10 +16,13 @@ font-weight: 500;
 .nav-link:hover, .nav-link:focus {
    color: $color-yellow !important;
 }
-
+.navbar-icon{
+    font-size: 26px;
+    color: $color-white;
+}
 .card{
     margin: 0 auto;
-    width: 80%;
+    width:100%;
     border: 0;
     border-radius: 5px;
    margin-bottom: 20px;
