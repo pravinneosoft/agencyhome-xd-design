@@ -1,43 +1,62 @@
-.navbar-brand{
+.navbar-brand {
     margin-right: 0;
     width: 230px;
 }
-.navbar-toggler{
+
+.navbar-toggler {
     border: 2px solid $color-white;
 }
+
 .navbar-toggler:focus {
-     box-shadow: none;
+    box-shadow: none;
 }
-.nav-link{
-color: $color-white !important;
-font-size: 15px;
-font-weight: 500;
+
+.nav-link {
+    color: $color-white  !important;
+    font-size: 15px;
+    font-weight: 500;
 }
-.nav-link:hover, .nav-link:focus {
-   color: $color-yellow !important;
+
+.nav-link:hover,
+.nav-link:focus {
+    color: $color-yellow  !important;
 }
-.navbar-icon{
+
+.navbar-icon {
     font-size: 26px;
     color: $color-white;
 }
-.card{
+
+.navbar-expand-lg .navbar-nav .nav-link { 
+    @include media-breakpoint-up(md){
+    padding-left: 40px;
+    &:last-child {
+        padding-right: 0;
+    }}
+}
+
+.card {
     margin: 0 auto;
-    width:100%;
+    width: 100%;
     border: 0;
     border-radius: 5px;
-   margin-bottom: 20px;
-        background-color: transparent;
-    &-body{
+    margin-bottom: 20px;
+    background-color: transparent;
+
+    &-body {
         padding-top: 30px;
         padding-left: 0;
+        padding-bottom: 0;
     }
-    &-title{
+
+    &-title {
         font-size: 20px;
         color: $color-white;
         font-weight: 400;
         margin-bottom: 20px;
     }
-    &-text{
+
+    &-text {
         font-size: 15px;
         color: $color-white;
         font-weight: 400;
