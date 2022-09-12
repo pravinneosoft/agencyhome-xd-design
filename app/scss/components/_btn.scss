@@ -2,7 +2,11 @@
     background-color: $color-yellow;
     border-radius: 5px;
     color: $color-white;
-
+&:hover{
+    box-shadow: 0 0 3px 0 #3498db inset, 0px 0 10px 0px #3498db;
+    color: $color-white;
+transition: 0.5s all ease-in-out;
+}
     &-say {
         padding: 13px 30px;
         font-size: 15px;
@@ -11,7 +15,15 @@
         border: 0;
     }
 
-    &-read {}
+    &-read {
+        &:hover{
+            &:hover{
+                box-shadow: 0 0 3px 0 #3498db inset, 0px 0 10px 0px #3498db;
+                color: $color-black;
+            transition: 0.5s all ease-in-out;
+            }
+        }
+    }
 
     &-submit {
         position: absolute;
@@ -19,6 +31,10 @@
         width: 28%;
         bottom: 4px;
         padding: 12px 0;
+        &:hover{
+            color: $color-black;
+            border: 0;
+        }
     }
     &-learn{
         font-size: 15px;

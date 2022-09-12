@@ -89,7 +89,8 @@
             font-size: 15px;
             font-weight: 400;
             color: $color-lightdark;
-            &:focus-visible{
+
+            &:focus-visible {
                 border: 0;
                 outline: 0;
                 outline-offset: 0;
@@ -104,59 +105,84 @@
             padding: 13px 0;
             background-color: $color-darkblue;
             border: 0;
-            border-top-left-radius:0;
+            border-top-left-radius: 0;
             border-bottom-left-radius: 0;
+
+            &:hover {
+                background-color: $color-lightblack;
+            }
         }
 
     }
 
-    &__social {
-        display: flex;
-        justify-content: center;
+
+    &__icons {
+        padding: 0;
+        list-style: none;
+        margin: 1em;
         text-align: center;
 
-        a {
-            display: table;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            margin: 0 10px;
-            color: $color-white;
-
-            &:first-child {
-                background-color: blue;
-            }
-
-            &:nth-child(2) {
-                background-color: aqua;
-
-            }
-
-            &:last-child {
-                background-color: red;
-            }
-
-            i {
-                display: table-cell;
-                vertical-align: middle;
-            }
+        li {
+            display: inline-block;
+            margin: 0.15em;
+            position: relative;
+            font-size: 16px;
 
         }
-    }
 
+        i {
+            color: $color-white;
+            position: absolute;
+            top: 13px;
+            left: 13.5px;
+            transition: all $timing ease-out;
+        }
+
+        a {
+            display: inline-block;
+
+            &:before {
+                @include transformScale();
+                content: " ";
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                display: block;
+                background: linear-gradient(45deg, $iconColor, $accent);
+                transition: all $timing ease-out;
+            }
+
+            &:hover:before {
+                transform: scale(0);
+                transition: all $timing ease-in;
+            }
+
+            &:hover i {
+                @include transformScale(2.2);
+                color: $iconColor;
+                background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all $timing ease-in;
+            }
+        }
+    }
     &__copyright {
         align-items: center;
         row-gap: 20px;
-justify-content: space-between;
+        justify-content: space-between;
+
         div {
             &:first-child {
                 display: flex;
                 justify-content: space-evenly;
             }
-            &:last-child{
+
+            &:last-child {
                 text-align: center;
-                @include media-breakpoint-up(md){
-                text-align: end;}
+                @include media-breakpoint-up(md) {
+                    text-align: end;
+                }
             }
         }
     }

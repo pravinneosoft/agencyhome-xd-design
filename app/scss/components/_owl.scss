@@ -55,18 +55,24 @@
     width: 55px;
     height: 55px;
     border-radius: 50% !important;
-    border: 1px solid blue !important;
+    border: 1.5px solid blue !important;
     text-align: center;
-
     span {
         font-size: 28px;
         color: $color-yellow ;
+        &:hover{
+            color: $color-white !important;
+        }
     }
 }
 
 .owl-theme .owl-nav [class*=owl-]:hover {
-    color: $color-white;
-    background-color: $color-white;
+    background-color: $color-yellow !important;
+    transition: 0.4s all ease-in-out;
+    border: 0 !important;
+    span{
+        color: #fff !important;
+    }
 }
 
 .owl-theme .owl-nav [class*="owl-"] {
