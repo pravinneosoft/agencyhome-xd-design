@@ -5,3 +5,11 @@
         border: 2px;
     }
     @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+    #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: $color-yellow;
+        color: $color-white;
+      }

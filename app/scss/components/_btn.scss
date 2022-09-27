@@ -2,27 +2,35 @@
     background-color: $color-yellow;
     border-radius: 5px;
     color: $color-white;
-&:hover{
-    box-shadow: 0 0 3px 0 #3498db inset, 0px 0 10px 0px #3498db;
-    color: $color-white;
-transition: 0.5s all ease-in-out;
-}
+
+    &:hover {
+        color: $color-yellow;
+    }
+
     &-say {
         padding: 13px 30px;
         font-size: 15px;
         font-size: 500;
-
         border: 0;
-    }
 
-    &-read {
-        &:hover{
-            &:hover{
-                box-shadow: 0 0 3px 0 #3498db inset, 0px 0 10px 0px #3498db;
-                color: $color-black;
-            transition: 0.5s all ease-in-out;
-            }
+        &:hover {
+            @include hover-effect;
+            color: $color-yellow;
         }
+    }
+    &-readmore{
+        &:hover{
+            background-color: $color-white;
+            border: 0;
+        }
+    }
+    &-read {
+        font-size: 15px;
+        &:hover {
+            background-color:rgba(0, 0, 255, 0.7) !important;
+            border: 0;
+        }
+
     }
 
     &-submit {
@@ -31,29 +39,49 @@ transition: 0.5s all ease-in-out;
         width: 28%;
         bottom: 4px;
         padding: 12px 0;
-        &:hover{
-            color: $color-black;
+
+        &:hover {
             border: 0;
+            background-color:rgba(0, 0, 255, 0.7);
+          
         }
     }
-    &-learn{
-        font-size: 15px;
-        font-weight: 500;
-        color: $color-darkblue;
-        display: flex;
+
+ 
+}
+.btn-learn {
+    display: inline-flex;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: $color-darkblue;
     align-items: center;
-    justify-content: center;
-    @include media-breakpoint-up(md) {
-        justify-content: flex-start;
-    }
-    i{
+    i {
         padding-left: 5px;
         font-size: 16px;
     }
-    }
-    &-learn-more {
-        color: $color-yellow;
-        justify-content: flex-start;
-       @extend .btn-learn
-    }
+  }
+  
+  .btn-learn:after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-yellow;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+   
+  }
+  
+  .btn-learn:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .btn-learn-more {
+    color: $color-white;
+    justify-content: flex-start;
+    @extend .btn-learn
 }

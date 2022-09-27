@@ -52,14 +52,17 @@
 
 .owl-next,
 .owl-prev {
-    width: 55px;
-    height: 55px;
+    width: 53px;
+    height: 53px;
     border-radius: 50% !important;
-    border: 1.5px solid blue !important;
+    border: 1.8px solid blue !important;
     text-align: center;
+    display: inline-flex !important;
+    justify-content: center ;
+   align-items: center;
     span {
-        font-size: 28px;
-        color: $color-yellow ;
+        font-size: 31px;
+    color: #FF9C00;
         &:hover{
             color: $color-white !important;
         }

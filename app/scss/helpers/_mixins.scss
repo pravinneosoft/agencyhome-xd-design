@@ -4,3 +4,8 @@
     -ms-transform: scale($size);
     -webkit-transform: scale($size);
 }
+@mixin hover-effect{
+    box-shadow: 0 0 3px 0 #3498db inset, 0px 0 10px 0px #3498db;
+                color: $color-white;
+            transition: 0.5s all ease-in-out;
+}
