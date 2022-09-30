@@ -22,3 +22,29 @@
 
 
 
+//   .wrapper{
+//     padding: 70px 0;
+//     overflow-x: hidden;
+//   }
+  
+  
+//   .my-slider{
+//     padding: 0 70px;
+//   }
+  .slick-initialized .slick-slide{
+   
+    height: 200px;
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  .slick-next, .slick-prev{
+   display: none;
+  }
+.slick-dots{
+    display: none !important;
+}

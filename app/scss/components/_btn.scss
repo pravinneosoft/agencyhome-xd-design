@@ -2,7 +2,7 @@
     background-color: $color-yellow;
     border-radius: 5px;
     color: $color-white;
-
+border: 0;
     &:hover {
         color: $color-yellow;
     }
@@ -13,37 +13,38 @@
         font-size: 500;
         border: 0;
 
-        &:hover {
-            @include hover-effect;
+        &:hover,&:focus {
+            background-color: $color-white;
             color: $color-yellow;
         }
     }
     &-readmore{
-        &:hover{
+        border: 0;
+        &:hover,&:focus{
             background-color: $color-white;
-            border: 0;
+           color: $color-yellow;
         }
+       
     }
-    &-read {
-        font-size: 15px;
-        &:hover {
-            background-color:rgba(0, 0, 255, 0.7) !important;
-            border: 0;
-        }
 
+
+    &-blue {
+        &:hover,&:focus {
+            background-color:$color-blue;
+color: $color-white;
+        }
     }
 
     &-submit {
         position: absolute;
         right: 3.6px;
         width: 28%;
-        bottom: 4px;
+        bottom: 5px;
         padding: 12px 0;
 
-        &:hover {
-            border: 0;
-            background-color:rgba(0, 0, 255, 0.7);
-          
+        &:hover,&:focus {
+            background-color:$color-blue;
+         
         }
     }
 

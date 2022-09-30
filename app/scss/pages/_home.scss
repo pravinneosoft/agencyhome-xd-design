@@ -48,11 +48,14 @@
 //service block css
 .servicess {
     &__heading {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
         text-align: center;
         color: $color-blue;
         margin-top: 40px;
+        @include media-breakpoint-up(md) {
+            font-size: 40px;
+        }
     }
 
     &__subheading {
@@ -146,10 +149,13 @@
     }
 
     &__title {
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
         color: $color-blue;
         margin-bottom: 30px;
+        @include media-breakpoint-up(md) {
+            font-size: 40px;
+        }
     }
 
     &__text {
@@ -163,7 +169,10 @@
         display: flex;
         justify-content: center;
         position: relative;
-
+        margin-bottom: 16px;
+@include media-breakpoint-up(md){
+    margin-bottom: 0;
+}
         &-email {
             border-radius: 5px;
             padding: 16px 0;
@@ -186,14 +195,20 @@
     background-image: url('../images/latestproject-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 0;
+@include media-breakpoint-up(md){
     padding: 100px 0;
-
+}
     &__title {
-        font-size: 40px;
+        font-size:32px;
         color: $color-white;
         font-weight: 700;
         text-align: center;
         margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            font-size: 40px;
+        }
     }
 
     &__text {
@@ -206,9 +221,12 @@
 
     &__card {
         width: 100%;
-
+margin-bottom: 40px;
         @include media-breakpoint-up(sm) {
             width: 84%;
+        }
+        @include media-breakpoint-up(md) {
+        margin-bottom: initial;
         }
     }
 }
@@ -246,10 +264,15 @@
     }
 
     &__title {
-        font-size: 20px;
+        font-size: 26px;
         color: $color-blue;
         font-weight: 500;
         margin: 15px 0;
+        margin-top: 24px;
+@include media-breakpoint-up(md) {
+   
+    margin-top: 0;
+}
     }
 
     &__subtitle {
