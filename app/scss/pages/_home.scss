@@ -47,6 +47,10 @@
 
 //service block css
 .servicess {
+    padding: 0 10px;
+    @include media-breakpoint-up(sm){
+        padding: initial;
+    }
     &__heading {
         font-size: 32px;
         font-weight: 700;
@@ -78,13 +82,8 @@
         }
 
         @include media-breakpoint-up(md) {
-            text-align: start;
-            padding: initial;
+            padding: 20px;
             margin: 0;
-        }
-
-        @include media-breakpoint-up(lg) {
-            width: 90%;
         }
 
         img {
@@ -102,6 +101,7 @@
         }
 
         p {
+            
             color: $color-lightblue;
             font-size: 15px;
             margin-bottom: 10px;

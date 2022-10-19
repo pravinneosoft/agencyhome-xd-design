@@ -28,9 +28,7 @@ $('.owl-carousel').owlCarousel({
   items: 1,
   dot: true,
   margin: 10,
-  nav: true,
-
-})
+  nav: true,});
 
 
 $(document).ready(function(){
@@ -59,3 +57,7 @@ $(document).ready(function(){
 ]
   });
 });
+
+
+
+  
