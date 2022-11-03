@@ -45,7 +45,10 @@
                 padding-left: 60px;
             }
             ul{
-                line-height: 32px;
+                li{
+                    @include media-breakpoint-up(lg){
+                    margin-bottom: 18px;}
+                }
             }
         }
     }
@@ -54,6 +57,9 @@
         font-size: 32px;
         font-weight: 700;
         color: $color-white;
+        @include media-breakpoint-up(lg){
+            margin-bottom: 19px;
+        }
 
         img {
             width: unset;
@@ -65,12 +71,15 @@
         font-size: 18px;
         font-weight: 700;
         color: $color-white;
-        margin-top: 20px;
+        margin-top: 35px;
 
         &-link {
             font-size: 15px;
             font-weight: 400;
             color: $color-dark;
+            a strong{
+                color:$color-yellow;
+            }
         }
 
     }
@@ -101,6 +110,10 @@
                 outline: 0;
                 outline-offset: 0;
             }
+            @include media-breakpoint-up(lg){
+                padding: 18px 0;
+                padding-left: 20px;
+            }
         }
 
         &-submit {
@@ -119,6 +132,9 @@
                 background-color: $color-yellow;
                 color: $color-white;
             }
+            @include media-breakpoint-up(lg){
+                padding: 18px 0;
+            }
         }
 
     }
@@ -127,16 +143,36 @@
     &__icons {
         padding: 0;
         list-style: none;
-        margin: 1em;
+        // margin: 1em;
         text-align: center;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 15px;
+margin: 0;
+        
         li {
             display: inline-block;
             margin: 0.15em;
             position: relative;
             font-size: 16px;
+            border-radius: 50%;
+           
 
+           &:nth-child(1){
+                background:$color-blue;
+
+                a{
+                    i{
+                        margin-left: 3px;
+                    }
+                }
+            }
+           &:nth-child(2){
+                background:$iconColor;
+            }
+            &:nth-child(3){
+                background: $color-red;
+            }
         }
 
         i {
@@ -149,31 +185,31 @@
 
         a {
             display: inline-block;
+            @include transformScale();
+            content: " ";
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            display: block;
+            
+            transition: all $timing ease-out;
+            // background:red;
+           
+          
 
-            &:before {
-                @include transformScale();
-                content: " ";
-                width: 40px;
-                height: 40px;
-                border-radius: 100%;
-                display: block;
-                background: linear-gradient(45deg, $iconColor, $accent);
-                transition: all $timing ease-out;
-            }
+            // &:hover:before {
+            //     transform: scale(0);
+            //     transition: all $timing ease-in;
+            // }
 
-            &:hover:before {
-                transform: scale(0);
-                transition: all $timing ease-in;
-            }
-
-            &:hover i {
-                @include transformScale(2.2);
-                color: $iconColor;
-                background: -webkit-linear-gradient(45deg, $iconColor, $accent);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: all $timing ease-in;
-            }
+            // &:hover i {
+            //     @include transformScale(2.2);
+            //     color: $iconColor;
+            //     background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+            //     -webkit-background-clip: text;
+            //     -webkit-text-fill-color: transparent;
+            //     transition: all $timing ease-in;
+            // }
         }
     }
     &__copyright {

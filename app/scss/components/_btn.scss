@@ -44,14 +44,18 @@ color: $color-white;
 
     &-submit {
         position: absolute;
-        right: 3.6px;
-        width: 28%;
-        bottom: 2px;
-        padding: 12px 0;
-
+        right: 5px;
+        width: 111px;
+        height: 50px;
+        padding: 5px 0;
+top: 5px;
+display: inline-block;
         &:hover,&:focus {
             background-color:$color-blue;
          
+        }
+        @include media-breakpoint-up(sm){
+            padding: 12px 0;
         }
     }
 
@@ -89,7 +93,7 @@ color: $color-white;
     transform-origin: bottom left;
   }
   .btn-learn-more {
-    color: $color-white;
+    color: $color-yellow !important;
     justify-content: flex-start;
-    @extend .btn-learn
+    @extend .btn-learn;
 }

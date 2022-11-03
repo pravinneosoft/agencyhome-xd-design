@@ -4,7 +4,7 @@
     margin: 0 auto;
     
 }
-.fcontainer{
+.fluid-container{
     padding: 0 8px;
     @include media-breakpoint-up(sm) {
         padding: 0 25px;}

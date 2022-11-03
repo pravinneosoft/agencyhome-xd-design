@@ -33,7 +33,7 @@ $('.owl-carousel').owlCarousel({
 
 $(document).ready(function(){
   $('.my-slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
     dots: true,
